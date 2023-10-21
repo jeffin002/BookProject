@@ -116,6 +116,7 @@
     <Content Include="library.html" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Sql\DataBase.sql" />
     <Content Include="UserView.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
