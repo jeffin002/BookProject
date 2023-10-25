@@ -15,9 +15,9 @@ namespace BLL
         ConnectionCls con = new ConnectionCls();
         BookAuthor ba = new BookAuthor();
 
-        public int  categoryimage(BookAuthor ba)
+        public int  categorydetails(BookAuthor ba)
         {
-            string s = "update category set image='"+ba.Image+"' where categoryid=1005 ";
+            string s = "insert into category values('"+ba.CategoryName+"','"+ba.CategoryDescription+"','"+ba.CategoryImage+"')";
             int i = con.Fn_NonQuery(s);
             return i;
         } 

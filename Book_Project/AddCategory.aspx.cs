@@ -20,17 +20,60 @@ namespace Book_Project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string p = "~/BookImage/" + FileUpload1.FileName;
-            FileUpload1.SaveAs(MapPath(p));
-            ba.Image = p;
-            int i = cb.categoryimage(ba);
-            if(i == 1)
+            int j = 0;
+            if(txtname.Text != "")
             {
-                Label1.Text = "inserted";
+                ba.CategoryName = txtname.Text;
+                lblnamevalidation.Visible = false;
+                j = j + 1;
             }
             else
             {
-                Label1.Text = "Error";
+                lblnamevalidation.Visible = true;
+                lblnamevalidation.Text = "Enter name";
+
+            }
+            if (txtdescription.Text != "")
+            {
+                ba.CategoryDescription = txtdescription.Text;
+                lbldescriptionvalidation.Visible = false;
+                j = j + 1;
+
+            }
+            else
+            {
+                lbldescriptionvalidation.Visible = true;
+                lbldescriptionvalidation.Text = "Enter description";
+
+            }
+            string p = "~/BookImage/" + FileUpload1.FileName;
+            FileUpload1.SaveAs(MapPath(p));
+            if(p != "")
+            {
+                ba.CategoryImage = p;
+                lblimagevalidation.Visible = false;
+                j = j + 1;
+
+            }
+            else
+            {
+                lblimagevalidation.Visible = true;
+                lblimagevalidation.Text = "Insert image";
+
+            }
+            if(j == 3)
+            {
+                int i = cb.categorydetails(ba);
+                if (i == 1)
+                {
+                    lblinsert.Visible = true;
+                    lblinsert.Text = "inserted";
+                }
+            }   
+            else
+            {
+                lblinsert.Visible = true;
+                lblinsert.Text = "Fill All Details";                
             }
             
 
