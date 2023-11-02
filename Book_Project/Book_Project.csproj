@@ -116,6 +116,7 @@
     <Content Include="library.html" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Shoppingcart.aspx" />
     <Content Include="Sql\DataBase.sql" />
     <Content Include="UserView.aspx" />
     <Content Include="Web.config" />
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shoppingcart.aspx.cs">
+      <DependentUpon>Shoppingcart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoppingcart.aspx.designer.cs">
+      <DependentUpon>Shoppingcart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

@@ -25,6 +25,7 @@ namespace Book_Project
             if(k > 0)
             {
                 int i = lb.Login(au);
+                Session["uid"] = i;
                 if (i > 0)
                 {
                     int j = lb.LoginRole(i);

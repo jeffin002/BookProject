@@ -46,10 +46,11 @@ namespace Book_Project
                 lbldescriptionvalidation.Text = "Enter description";
 
             }
-            string p = "~/BookImage/" + FileUpload1.FileName;
-            FileUpload1.SaveAs(MapPath(p));
-            if(p != "")
+            
+            if(FileUpload1.FileName != "")
             {
+                string p = "~/BookImage/" + FileUpload1.FileName;
+                FileUpload1.SaveAs(MapPath(p));
                 ba.CategoryImage = p;
                 lblimagevalidation.Visible = false;
                 j = j + 1;

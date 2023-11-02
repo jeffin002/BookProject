@@ -24,5 +24,9 @@ namespace Model1
 
         public int CategoryId { get; set; }
         public int AuthorId { get; set; }
+        public int BookId { get; set; }
+        public int AppUserId { get; set; }
+        public int Quantity { get; set; }
+        public int ShoppingCartId { get; set; }
     }
 }

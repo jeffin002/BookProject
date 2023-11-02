@@ -9,12 +9,15 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style3 {
+            width: 87px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:DataList ID="DataList1" runat="server">
+            <asp:DataList ID="DataList1" runat="server" RepeatColumns="5">
                 <ItemTemplate>
                     <table class="auto-style1">
                         <tr>
@@ -45,50 +48,46 @@
                             <td>
                                 <table class="auto-style1">
                                     <tr>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style3">&nbsp;</td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="auto-style3">
                                             <asp:Label ID="Label3" runat="server" Text='<%# Eval("BookUnitPrice") %>'></asp:Label>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style3">&nbsp;</td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="auto-style3">
                                             <asp:Label ID="Label4" runat="server" Text='<%# Eval("PublishedDate") %>'></asp:Label>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style3">&nbsp;</td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <td class="auto-style3">
                                             <asp:Label ID="Label5" runat="server" Text='<%# Eval("AuthorName") %>'></asp:Label>
                                         </td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style3">&nbsp;</td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
+                                        <td class="auto-style3">
+                                            <asp:Button ID="Button1" runat="server" BorderWidth="5px" CommandArgument='<%# Eval("BookId") %>' ForeColor="Red" OnCommand="Button1_Command" Text="Add To Cart" />
+                                        </td>
+                                        <td>
+                                            <asp:Label ID="Label6" runat="server" Text="Label" Visible="False"></asp:Label>
+                                        </td>
                                     </tr>
                                 </table>
                             </td>
