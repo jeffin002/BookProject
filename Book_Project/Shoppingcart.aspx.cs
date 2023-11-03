@@ -41,7 +41,7 @@ namespace Book_Project
         public string TotalPrice(BookAuthor ba)
         {
             ba.AppUserId = Convert.ToInt16(Session["uid"]);            
-            string j = scb.TotalPrice(ba);
+            string j = Math.Round(Convert.ToDecimal(scb.TotalPrice(ba)),1).ToString();
             return j;
         }
 
@@ -56,6 +56,12 @@ namespace Book_Project
                 Label4.Text = TotalPrice(ba);
             }
 
+        }
+
+        protected void LinkButton2_Command(object sender, CommandEventArgs e)
+        {
+            Session["scid"]=e.CommandArgument;
+            Response.Redirect("ShoppingCartEdit.aspx");
         }
     }
 }

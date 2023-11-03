@@ -61,7 +61,7 @@
                                         <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("shoppingcartid") %>' OnCommand="LinkButton1_Command">Delete</asp:LinkButton>
                                     </td>
                                     <td>
-                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("shoppingcartid") %>'>Edit</asp:LinkButton>
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("shoppingcartid") %>' OnCommand="LinkButton2_Command">Edit</asp:LinkButton>
                                     </td>
                                 </tr>
                             </table>

@@ -117,6 +117,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Shoppingcart.aspx" />
+    <Content Include="ShoppingCartEdit.aspx" />
     <Content Include="Sql\DataBase.sql" />
     <Content Include="UserView.aspx" />
     <Content Include="Web.config" />
@@ -186,6 +187,13 @@
     </Compile>
     <Compile Include="Shoppingcart.aspx.designer.cs">
       <DependentUpon>Shoppingcart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCartEdit.aspx.cs">
+      <DependentUpon>ShoppingCartEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCartEdit.aspx.designer.cs">
+      <DependentUpon>ShoppingCartEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

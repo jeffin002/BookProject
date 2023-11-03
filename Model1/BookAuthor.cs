@@ -27,6 +27,7 @@ namespace Model1
         public int BookId { get; set; }
         public int AppUserId { get; set; }
         public int Quantity { get; set; }
+        public int EditQuantity { get; set; }
         public int ShoppingCartId { get; set; }
     }
 }
