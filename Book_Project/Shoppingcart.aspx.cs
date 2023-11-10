@@ -63,5 +63,10 @@ namespace Book_Project
             Session["scid"]=e.CommandArgument;
             Response.Redirect("ShoppingCartEdit.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {            
+            Response.Redirect("OrderView.aspx");
+        }
     }
 }
