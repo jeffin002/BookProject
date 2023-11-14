@@ -25,7 +25,17 @@ namespace Book_Project
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminView.aspx");
+            ba.AppUserId = Convert.ToInt32(Session["uid"]);
+            int i = ob.cheak(ba);
+            if(i == 1)
+            {
+                Response.Redirect("AdminView.aspx");
+            }
+            else
+            {
+                Response.Redirect("UserView.aspx");
+            }
+            
         }
     }
 }

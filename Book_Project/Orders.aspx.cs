@@ -19,8 +19,17 @@ namespace Book_Project
         {
             ba.AppUserId = Convert.ToInt32(Session["uid"]);
             DataSet ds=ob.orders(ba);
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
+            bool isDataSetEmpty = ds.Tables.Cast<DataTable>().All(table => table.Rows.Count == 0);
+            if (isDataSetEmpty)
+            {
+                Label1.Visible = true;
+                Label1.Text = "No Previous Orders!";
+            }
+            else
+            {
+                GridView1.DataSource = ds;
+                GridView1.DataBind();
+            }           
         }
     }
 }

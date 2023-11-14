@@ -17,12 +17,27 @@ namespace Book_Project
         ShoppingCartBll scb = new ShoppingCartBll();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if(TotalQuantity(ba) > 0)
             {
-                grid_bind();
-                Label2.Text = TotalQuantity(ba).ToString();
-                Label4.Text = TotalPrice(ba);
-            }            
+                if (!IsPostBack)
+                {
+                    grid_bind();
+                    Label2.Text = TotalQuantity(ba).ToString();
+                    Label4.Text = TotalPrice(ba);
+                }
+            }
+            else
+            {
+                Label5.Visible = true;
+                Label5.Text = "No Items in the Cart";
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Label3.Visible = false;
+                Label4.Visible = false;
+                Button1.Visible = false;
+
+            }
+                     
             
         }
         public void grid_bind()

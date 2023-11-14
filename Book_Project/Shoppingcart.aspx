@@ -26,6 +26,15 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3">
+                        <asp:Label ID="Label5" runat="server" Text="Label" Visible="False"></asp:Label>
+                    </td>
+                    <td class="auto-style4">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
                         <asp:Label ID="Label1" runat="server" Text="Total Items"></asp:Label>
                     </td>
                     <td class="auto-style4">

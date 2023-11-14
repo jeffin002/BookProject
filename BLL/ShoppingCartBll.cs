@@ -45,8 +45,17 @@ namespace BLL
         public int Totalquantity(BookAuthor ba)
         {
             string strquantity = "select sum(quantity) from shoppingcart where Appuserid=" + ba.AppUserId + "";
-            int quantity = Convert.ToInt32(con.Fn_Scalar(strquantity));
-            return quantity;
+            string ifempty = con.Fn_Scalar(strquantity);
+            if (ifempty == "")
+            {
+                ba.Quantity = 0;
+            }
+            else
+            {
+                ba.Quantity = Convert.ToInt32(ifempty);
+            }
+            
+            return ba.Quantity;
         }
         public string TotalPrice(BookAuthor ba)
         {

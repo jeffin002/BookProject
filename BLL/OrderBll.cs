@@ -54,5 +54,11 @@ namespace BLL
             DataSet ds = con.Fn_DataSet(orders);
             return ds;
         }
+        public int cheak(BookAuthor ba)
+        {
+            string cheak="Select AppRoleid from AppUserRole where Appuserid=" + ba.AppUserId + "";
+            int i = Convert.ToInt32(con.Fn_Scalar(cheak));
+            return i;
+        }
     }
 }
